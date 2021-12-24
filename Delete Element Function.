@@ -1,0 +1,21 @@
+public static Node<Integer> deleteElement(Node<Integer> head,int pos){
+     Node temp = head;
+        if((head != null) && pos == 0){
+        head.data = head.next.data;
+        head.next = head.next.next;
+            return head;
+        }
+        else{
+            int i = 0;
+            while(head != null && i < pos-1){
+                temp = temp.next;
+                i++;
+            }
+
+            temp.next = temp.next.next;
+        }
+        if(temp == null){
+            return temp;
+        }
+        return head;
+    }
