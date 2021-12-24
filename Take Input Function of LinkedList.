@@ -1,0 +1,17 @@
+public static Node<Integer> takeInput(){
+        Node<Integer> head = null , tail = null;
+        Scanner s = new Scanner(System.in);
+        int data = s.nextInt();
+        while(data != -1){
+            Node<Integer> newNode = new Node<Integer>(data);
+            if (head == null){
+                head = newNode;
+                tail = newNode;
+            }else {
+                tail.next = newNode;
+                tail = newNode;
+            }
+            data = s.nextInt();
+        }
+        return head;
+    }
