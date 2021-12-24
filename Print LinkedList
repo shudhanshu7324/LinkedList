@@ -1,0 +1,7 @@
+public static void printLL(Node head){
+        Node<Integer> temp = head;
+        while(head != null){
+            System.out.print(head.data + " ");
+            head = head.next;
+        }
+    }
